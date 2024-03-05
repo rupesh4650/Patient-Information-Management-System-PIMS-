@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update your data </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-blue-900 text-white flex items-center justify-center h-screen">
+
+  <div class="container mx-auto p-8">
+    <form class="bg-gray-800 rounded-lg shadow-lg p-6" action="/update" method="POST">
+      <h1 class="text-2xl font-bold mb-6 text-white">Patient Information Form</h1>
+        <div class="mb-4" hidden>
+          <input type="hidden" id="id" name="id" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500 bg-gray-700 text-white" value="{{.ID}}" required>
+        </div>
+
+
+        <div class="mb-4">
+          <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Name</label>
+          <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500 bg-gray-700 text-white" placeholder="Enter patient's name" required>
+        </div>
+
+        <div class="mb-4">
+          <label for="age" class="block mb-2 text-sm font-medium text-gray-300">Age</label>
+          <input type="number" id="age" name="age" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500 bg-gray-700 text-white" placeholder="Enter patient's age" required>
+        </div>
+
+      <div class="mb-4">
+          <label for="imageURL" class="block mb-2 text-sm font-medium text-gray-300">Image URL</label>
+          <input type="text" id="imageURL" name="image_url" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500 bg-gray-700 text-white" placeholder="Enter image URL" required>
+        </div>
+
+        <div class="mb-4">
+          <label for="address" class="block mb-2 text-sm font-medium text-gray-300">Address</label>
+          <textarea id="address" name="address" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500 bg-gray-700 text-white" placeholder="Enter patient's address" required></textarea>
+        </div>
+
+        <div class="mb-4">
+          <label for="diseaseList" class="block mb-2 text-sm font-medium text-gray-300">Disease List</label>
+          <input type="text" id="diseaseList" name="disease_list" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500 bg-gray-700 text-white" placeholder="Enter patient's diseases" required>
+        </div>
+
+        <div class="mb-4">
+          <label for="aptDate" class="block mb-2 text-sm font-medium text-gray-300">Appointment Date</label>
+          <input type="date" id="aptDate" name="apt_date" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500 bg-gray-700 text-white" required>
+        </div>
+
+        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-medium rounded-lg text-lg px-6 py-3">Submit</button>
+      </form>
+    </div>
+
+  </body>
+</html>
+
